@@ -27,7 +27,7 @@
             background: linear-gradient(to bottom, var(--color-background-1), var(--color-background-2));
         }
 
-        #cabecalho {
+        header {
             display: flex;
             justify-content: center;
             align-items: stretch;
@@ -39,11 +39,11 @@
             border-bottom-right-radius: 20px;
         }
 
-        #cabecalho *:hover {
+        header *:hover {
             cursor: default;
         }
 
-        #cabecalho span {
+        header span {
             color: var(--color-secundary);
         }
 
@@ -52,7 +52,7 @@
             width: 80vw;
         }
 
-        #conteudo {
+        main {
             height: 90vh;
             display: flex;
             justify-content: center;
@@ -87,7 +87,7 @@
             transition: 0.3s;
         }
 
-        #rodape {
+        footer {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -99,11 +99,11 @@
             border-top-right-radius: 20px;
         }
 
-        #rodape *:hover {
+        footer *:hover {
             cursor: default;
         }
 
-        #rodape h4 {
+        footer h4 {
             opacity: 80%;
         }
 
@@ -159,17 +159,17 @@
 
     <div id="container">
 
-        <header id="cabecalho">
+        <header>
             <h1>Local<span>host</span></h1>
         </header>
 
-        <main id="conteudo">
+        <main>
 
             <?php
             $path = "./";
-            $diretorio = dir($path);
+            $directory = dir($path);
 
-            while ($file = $diretorio->read()) {
+            while ($file = $directory->read()) {
                 if (strpbrk($file, ".")) {
                     continue;
                 } else {
@@ -180,8 +180,8 @@
 
         </main>
 
-        <footer id="rodape">
-            <h4>&copy; GPL v3.0.</h4>
+        <footer>
+            <h4>&copy; AGPL-v3.0.</h4>
         </footer>
 
     </div>
