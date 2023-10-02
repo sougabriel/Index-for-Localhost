@@ -1,4 +1,4 @@
-# Index for Localhost
+# Index for PHP Servers
   This is a PHP file to customize your user or localhost index. 
 
 ## Installation
